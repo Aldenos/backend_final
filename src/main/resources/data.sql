@@ -15,10 +15,10 @@ ON CONFLICT (id) DO NOTHING;
 
 -- 2. USUARIOS
 -- Contraseña de prueba: "password123" hasheada con BCrypt
-INSERT INTO users (id, email, password, role_id, verified, created_at) VALUES
-    (1, 'profesor@upc.edu.pe', '$2a$10$7v52m9GkO1x985q0/3yY8.A2Tz3mK.7T1G0Xf7J0j9h9Z2P3oYQOW', 1, true, CURRENT_TIMESTAMP),
-    (2, 'alumno1@upc.edu.pe', '$2a$10$7v52m9GkO1x985q0/3yY8.A2Tz3mK.7T1G0Xf7J0j9h9Z2P3oYQOW', 2, true, CURRENT_TIMESTAMP),
-    (3, 'alumno2@upc.edu.pe', '$2a$10$7v52m9GkO1x985q0/3yY8.A2Tz3mK.7T1G0Xf7J0j9h9Z2P3oYQOW', 2, true, CURRENT_TIMESTAMP)
+INSERT INTO users (id, email, password, role_id, verified, status, created_at) VALUES
+    (1, 'profesor@upc.edu.pe', '$2a$10$7v52m9GkO1x985q0/3yY8.A2Tz3mK.7T1G0Xf7J0j9h9Z2P3oYQOW', 1, true, 'ACTIVE', CURRENT_TIMESTAMP),
+    (2, 'alumno1@upc.edu.pe', '$2a$10$7v52m9GkO1x985q0/3yY8.A2Tz3mK.7T1G0Xf7J0j9h9Z2P3oYQOW', 2, true, 'ACTIVE', CURRENT_TIMESTAMP),
+    (3, 'alumno2@upc.edu.pe', '$2a$10$7v52m9GkO1x985q0/3yY8.A2Tz3mK.7T1G0Xf7J0j9h9Z2P3oYQOW', 2, true, 'ACTIVE', CURRENT_TIMESTAMP)
 ON CONFLICT (id) DO NOTHING;
 
 
